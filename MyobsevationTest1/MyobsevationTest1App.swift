@@ -11,7 +11,17 @@ import SwiftUI
 struct MyobsevationTest1App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                SubView()
+                    .tabItem {
+                        Label("四角の表示", systemImage: "figure.walk")
+                    }
+                CounterView()
+                    .tabItem {
+                        Label("カウンター", systemImage: "arrow.counterclockwise")
+                    }
+            }
+//            ContentView()
         }
     }
 }
